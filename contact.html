@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 50px;
+            background-color: rgb(94, 94, 94);
+            padding: 15px;
+        }
+       .nav-ul {
+            display: flex;
+            align-items: center;
+        }
+        .nav-li{
+            list-style: none;
+            padding: 10px;
+            position: relative;
+            transition: 0.3s;
+        }
+        .inner-ul{
+            position: absolute;
+            top: 45px;
+            background-color: rgb(55, 55, 55);
+            width: 110px;
+            left: -5px;
+            border-radius: 10px;
+            /* display: none; */
+        }
+        
+        .inner-li{
+            padding: 10px;
+            list-style: none;
+            color: aliceblue;
+            display: none;
+            cursor: pointer;
+        }
+        
+        .service:hover .inner-li{
+            display: block;
+        }
+        .btn-login{
+            padding: 6px 12px;
+            border-radius: 2px;
+            border: none; 
+            display: none;
+        }
+        label{
+            font-size: 34px;
+        }
+        .nav-a{
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+        }
+        .center{
+            text-align: center;
+            padding: 5rem;
+        }
+        p{
+            margin-top: 1rem;
+        }
+        .jj{
+            padding: 6px 12px;
+        }
+        form{
+            width: 450px;
+            border-radius: 4px;
+            border:1px solid ;
+            height: auto;
+            padding: 10px ;
+            margin-top: 1rem;
+        }
+        input{
+            width: 100%;
+            padding: 6px 12px;
+            margin-top: 10px;
+        }
+        .form-btn{
+            padding: 6px 12px;
+            margin-top: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <label for="">Logo</label>
+        <nav>
+            <ul class="nav-ul">
+                <li class="nav-li"><a href="http://127.0.0.1:3000/index.html" class="nav-a">Home</a></li>
+                <li class="nav-li"><a href="http://127.0.0.1:3000/About.html" class="nav-a">About us</a></li>
+                <li class="nav-li service"><a href="http://127.0.0.1:3000/service.html" class="nav-a">Serivce</a>
+                    <ul class="inner-ul">
+                        <li class="inner-li">service one</li>
+                        <li class="inner-li">service two</li>
+                        <li class="inner-li">service three</li>
+                    </ul>
+                </li>
+                <li class="nav-li"><a href="http://127.0.0.1:3000/contact.html" class="nav-a">Contact</a></li>
+                <button class="btn-login">Login</button>
+            </ul>
+        </nav>
+        <button class="jj">Login</button>
+    </header>
+
+   <div class="center">
+    <h1>Contact</h1>
+   <form action="">
+    <input type="text" placeholder="name">
+    <input type="text" placeholder="email">
+    <button class="form-btn">submit</button>
+   </form>
+   </div>
+    
+</body>
+</html>
