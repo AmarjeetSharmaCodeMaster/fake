@@ -90,6 +90,42 @@
             padding: 6px 12px;
             margin-top: 1.5rem;
         }
+         @media (max-width:850px) {
+           nav{
+            display: none;
+            transition: 0.6s;
+           }
+           nav.show{
+            display: block;
+           }
+           .nav-ul{
+            position: absolute;
+            top: 50px;
+            left: 0;
+            background-color: rgb(65, 64, 64);
+            width: 100%;
+            height: auto;
+            display: block;
+           }
+           .nav-li{
+            border-bottom:1px solid rgb(87, 86, 86) ;
+           }
+           
+           .nav-a{
+            color: rgb(250, 247, 247);
+           }
+           .inner-ul{
+            position: inherit;
+            top: 5px;
+            width: 100%;
+            display: none;
+           }
+           .service:hover .inner-ul{
+            display: block;
+            cursor: pointer;
+           }
+
+        }
     </style>
 </head>
 <body>
@@ -121,6 +157,12 @@
     <button class="form-btn">submit</button>
    </form>
    </div>
-    
+    <script>
+    const jjbtn = document.querySelector(".jj")
+    const  nav = document.querySelector("nav")
+    jjbtn.addEventListener("click",()=>{
+        nav.classList.toggle("show")
+    })
+   </script>
 </body>
 </html>
